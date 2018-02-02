@@ -23,6 +23,10 @@ MongoClient.connect('mongodb://localhost:27017/', (err, client) => {
     console.log('Unable to fetch todos', err);
   });
 
+  db.collection('Todos').deleteMany({text: 'Something to do'}).then((res) => {
+    console.log('Deleted many.');
+  });
+
   client.close();
   console.log('Client closed.')
 });
