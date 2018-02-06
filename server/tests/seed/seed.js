@@ -22,12 +22,14 @@ const userSeed = [{
 
 const todosTestSeed = [{
   _id: new ObjectID(),
-  text: 'First todo'
+  text: 'First todo',
+  _creator: userOneId
 }, {
   _id: new ObjectID(),
   text: 'second todo',
   completed: true,
-  completedAt: 123123
+  completedAt: 123123,
+  _creator: userTwoId
 }];
 
 const populateUsers = (done) => {
